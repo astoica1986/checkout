@@ -1,19 +1,24 @@
 # Checkout
 
-**TODO: Add description**
+Basic module for handling a checkout cart. <br />
+( subtracting the discounts). <br />
+Offers a way to "scan" products into a cart and to calculate a total <br />
+Only products from a predefined list(tshit, voucher , mug) can be scanned<br />
+Please see https://gist.github.com/patriciagao/377dca8920ba3b1fc8da for more details
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `checkout` to your list of dependencies in `mix.exs`:
+ ~ git clone git@github.com:astoica1986/checkout.git <br />
+ ~ cd checkout <br />
+ ~ mix deps.get <br />
+ ~ mix deps.compile <br />
+ ~ mix test <br />
 
-```elixir
-def deps do
-  [{:checkout, "~> 0.1.0"}]
-end
-```
+## Usage
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/checkout](https://hexdocs.pm/checkout).
-
+~ iex -S mix <br />
+iex(1)> alias Checkout.Cart <br />
+iex(2)> cart = Checkout.create_cart <br />
+iex(3)>Cart.scan(cart, "VOUCHER"); Cart.scan(cart, "TSHIRT"); <br />
+iex(4)> Cart.scan(cart, "VOUCHER") <br />
+iex(5)>Cart.total(cart) <br />
