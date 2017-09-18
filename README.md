@@ -22,3 +22,12 @@ iex(2)> cart = Checkout.create_cart <br />
 iex(3)>Cart.scan(cart, "VOUCHER"); Cart.scan(cart, "TSHIRT"); <br />
 iex(4)> Cart.scan(cart, "VOUCHER") <br />
 iex(5)>Cart.total(cart) <br />
+
+## TODO
+*I'm thinking of writing additional tests for the Calculator module*  <br />
+*Expand the features by including a way to delete an item from a cart(not in the initial requirements)*
+*Load the product list from a DB(it doesn't really make sense with such a short list)*
+*Calculate the total in its own process*
+*Maybe a create a small webservice for demo purposes*
+*Offer a way to customize the product list(related to possibly storing the list it in a DB)*
+*Think of a way to make the discount logic customizable*
